@@ -7,7 +7,6 @@ import {
   Logo,
   SearchContainer,
   CategoryWrapper,
-  SearchInput,
   SearchButton,
   IconContainer,
   BottomNav,
@@ -15,6 +14,7 @@ import {
 } from "./Navbar.styles";
 
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
+import Input from "../../atoms/input/Input";
 
 const Navbar = () => {
   return (
@@ -42,7 +42,7 @@ const Navbar = () => {
         </LogoContainer>
         <SearchContainer>
           <FaSearch />
-          <SearchInput type="text" placeholder="Keşfetmeye Bak" />
+          <Input type="text" placeholder="Keşfetmeye Bak" width="400px" />
           <SearchButton>BUL</SearchButton>
         </SearchContainer>
         <IconContainer>

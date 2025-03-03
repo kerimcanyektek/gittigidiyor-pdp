@@ -34,8 +34,6 @@ export const MiddleNav = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 35px 20px;
-
-  /* Tüm elemanları ortalayacağız */
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -62,15 +60,15 @@ export const SearchContainer = styled.div`
   flex: 1;
   max-width: 500px;
   justify-content: space-between;
-`;
 
-export const SearchInput = styled.input`
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 5px;
-  outline: none;
-  font-size: 14px;
+  input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+    font-size: 14px;
+  }
 `;
 
 export const SearchButton = styled.button`
@@ -79,7 +77,6 @@ export const SearchButton = styled.button`
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
-
   cursor: pointer;
   font-size: 14px;
   margin-left: 5px;
@@ -89,7 +86,6 @@ export const SearchButton = styled.button`
   }
 `;
 
-/* Account & Cart */
 export const IconContainer = styled.div`
   display: flex;
   gap: 20px;
