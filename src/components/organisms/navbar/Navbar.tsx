@@ -2,23 +2,29 @@ import {
   NavbarContainer,
   TopNav,
   TopNavLinks,
+  MiddleNav,
+  LogoContainer,
+  Logo,
   SearchContainer,
+  CategoryWrapper,
   SearchInput,
   SearchButton,
-  AccountCartContainer,
-  CategoryMenu,
+  IconContainer,
+  BottomNav,
   CategoryItem,
 } from "./Navbar.styles";
+
+import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <NavbarContainer>
       <TopNav>
         <TopNavLinks>
-          <a href="#">Yıldız Fırsatlar</a>
+          <a href="#">Süper Fiyatlar</a>
           <a href="#">Tüm Kampanyalar</a>
-          <a href="#" className="blue-link">Yurt Dışı</a>
-          <a href="#">Cadde</a>
+          <a href="#">Yurt Dışı Alışveriş</a>
+          <a href="#">Kazananlar Kulübü</a>
           <a href="#">Satış Yap</a>
           <a href="#">Mağaza Aç</a>
           <a href="#">Bize Ulaşın</a>
@@ -27,27 +33,52 @@ const Navbar = () => {
         </TopNavLinks>
       </TopNav>
 
-      <SearchContainer>
-        <img src="src/assets/gittigidiyor-logo.svg" alt="GittiGidiyor Logo" height="30" />
-        <SearchInput type="text" placeholder="Keşfetmeye Bak" />
-        <SearchButton>BUL</SearchButton>
-        <AccountCartContainer>
-          <button>Hesabım</button>
-          <button>Sepetim</button>
-        </AccountCartContainer>
-      </SearchContainer>
+      <MiddleNav>
+        <LogoContainer>
+          <Logo
+            src="src\assets\gittigidiyor-logo.svg"
+            alt="GittiGidiyor Logo"
+          />
+        </LogoContainer>
+        <SearchContainer>
+          <FaSearch />
+          <SearchInput type="text" placeholder="Keşfetmeye Bak" />
+          <SearchButton>BUL</SearchButton>
+        </SearchContainer>
+        <IconContainer>
+          <div>
+            <div className="icon-wrapper">
+              <FaUser />
+            </div>
+            <div className="text-container">
+              <span>Giriş Yap</span>
+              <small>veya Üye Ol</small>
+            </div>
+          </div>
+          <div>
+            <div className="icon-wrapper">
+              <FaShoppingCart />
+            </div>
+            <div className="text-container">
+              <span>Sepetim</span>
+            </div>
+          </div>
+        </IconContainer>
+      </MiddleNav>
 
-      <CategoryMenu>
-        <CategoryItem>Elektronik</CategoryItem>
-        <CategoryItem>Ev, Bahçe, Ofis, Yapı Market</CategoryItem>
-        <CategoryItem>Moda</CategoryItem>
-        <CategoryItem>Kozmetik, Kişisel Bakım</CategoryItem>
-        <CategoryItem>Bebek, Anne</CategoryItem>
-        <CategoryItem>Süpermarket, Evcil Hayvan</CategoryItem>
-        <CategoryItem>Kitap, Müzik, Oyuncak, Hobi</CategoryItem>
-        <CategoryItem className="active">Otomobil, Motosiklet</CategoryItem>
-        <CategoryItem>Spor, Outdoor</CategoryItem>
-      </CategoryMenu>
+      <BottomNav>
+        <CategoryWrapper>
+          <CategoryItem>Elektronik</CategoryItem>
+          <CategoryItem>Ev, Bahçe, Ofis, Yapı Market</CategoryItem>
+          <CategoryItem>Moda</CategoryItem>
+          <CategoryItem>Kozmetik, Kişisel Bakım</CategoryItem>
+          <CategoryItem>Anne, Bebek</CategoryItem>
+          <CategoryItem>Süpermarket, Evcil Hayvan</CategoryItem>
+          <CategoryItem>Kitap, Müzik, Oyuncak, Hobi</CategoryItem>
+          <CategoryItem>Otomobil, Motosiklet</CategoryItem>
+          <CategoryItem>Spor, Outdoor</CategoryItem>
+        </CategoryWrapper>
+      </BottomNav>
     </NavbarContainer>
   );
 };
