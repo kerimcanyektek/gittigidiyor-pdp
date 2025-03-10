@@ -7,7 +7,6 @@ export const GET_PRODUCTS = gql`
         node {
           id
           title
-          description
           featuredImage {
             url
           }
@@ -15,6 +14,13 @@ export const GET_PRODUCTS = gql`
             minVariantPrice {
               amount
               currencyCode
+            }
+          }
+          images(first: 5) {  # Ürüne ait ilk 5 resmi alıyoruz
+            edges {
+              node {
+                url
+              }
             }
           }
         }

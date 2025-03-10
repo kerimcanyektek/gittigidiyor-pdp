@@ -1,7 +1,7 @@
 import { ApolloProvider } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import client from "./context/ApolloClient";
-import { GlobalStyles } from "./styles/GlobalStyles";
+import GlobalStyles from "./styles/GlobalStyles"; 
 import Home from "./pages/home/Home";
 import ProductPage from "./pages/product-page/ProductPage";
 import Navbar from "./components/organisms/navbar/Navbar";

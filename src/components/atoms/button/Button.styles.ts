@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button<{ variant: string }>`
   padding: 10px 20px;
+  margin-right: 15px;
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;

@@ -1,14 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
-  
+
   body {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
+  }
+
+  .home-wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 0;
   }
 `;
+
+export default GlobalStyles;
